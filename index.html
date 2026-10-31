@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SpotPesa football fixtures and odds demo">
+  <title>SpotPesa | Football</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SpotPesa home">
+      <img src="logo.png" alt="SpotPesa — Play, Bet, Win">
+    </a>
+
+    <nav class="main-nav">
+      <a class="active" href="#">Football</a>
+      <a href="#">Live</a>
+      <a href="#">Basketball</a>
+      <a href="#">Tennis</a>
+    </nav>
+
+    <div class="account">
+      <button class="login" id="loginBtn">Log in</button>
+      <button class="join" id="joinBtn">Join now</button>
+    </div>
+  </header>
+
+  <div class="notice">
+    DEMO PLATFORM · No real-money betting or deposits
+  </div>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h3>SPORTS</h3>
+      <a class="side-active" href="#">⚽ Football <span>›</span></a>
+      <a href="#">🏀 Basketball</a>
+      <a href="#">🎾 Tennis</a>
+      <a href="#">🏐 Volleyball</a>
+
+      <h3>POPULAR LEAGUES</h3>
+      <a href="#">🇬🇧 England - Premier League</a>
+      <a href="#">🇪🇸 Spain - La Liga</a>
+      <a href="#">🇮🇹 Italy - Serie A</a>
+      <a href="#">🇩🇪 Germany - Bundesliga</a>
+      <a href="#">🇪🇺 UEFA Champions League</a>
+
+      <div class="sidebar-note">
+        Fixtures and odds shown here are sample data for demonstration.
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">FOOTBALL CENTER</p>
+          <h1>Find your next match</h1>
+          <p>Explore fixtures, compare demo odds and build a sample bet slip.</p>
+        </div>
+        <div class="hero-ball">⚽</div>
+      </div>
+
+      <div class="toolbar">
+        <div class="tabs">
+          <button class="tab selected" data-filter="all">All matches</button>
+          <button class="tab" data-filter="live">Live</button>
+          <button class="tab" data-filter="upcoming">Upcoming</button>
+        </div>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search teams or league…"
+          aria-label="Search matches"
+        >
+      </div>
+
+      <div class="league-heading">
+        <span>🇬🇧</span>
+        <strong>ENGLAND · PREMIER LEAGUE</strong>
+        <small>Sample fixtures</small>
+      </div>
+
+      <div id="matches" class="matches"></div>
+
+      <p class="disclaimer">
+        All teams, fixtures and odds in this prototype are illustrative.
+        SpotPesa is an independent demo and does not accept or process real bets.
+      </p>
+    </section>
+
+    <aside class="slip-panel">
+      <div class="slip-head">
+        <h2>Bet slip</h2>
+        <span id="selectionCount">0 selections</span>
+      </div>
+
+      <div id="slipItems" class="slip-items">
+        <div class="empty">Your selections will appear here.</div>
+      </div>
+
+      <label class="stake-label" for="stake">Stake (KSh)</label>
+      <input
+        id="stake"
+        type="number"
+        min="1"
+        step="1"
+        placeholder="Enter demo stake"
+        value="100"
+      >
+
+      <div class="slip-summary">
+        <span>Combined odds</span>
+        <strong id="combinedOdds">—</strong>
+      </div>
+
+      <div class="slip-summary">
+        <span>Potential return</span>
+        <strong id="potentialReturn">KSh 0.00</strong>
+      </div>
+
+      <button id="placeBet" class="place-bet" disabled>
+        Place demo bet
+      </button>
+
+      <p class="slip-foot">
+        Simulation only. No money is taken and no wager is created.
+      </p>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <footer>
+    © 2026 SpotPesa Demo · Independent educational prototype
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
